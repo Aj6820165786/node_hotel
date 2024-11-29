@@ -1,7 +1,9 @@
+import 'dotenv/config'
 import express from "express";
-import { Person } from "./models/person.models.js";
-import { Menu } from "./models/menu.models.js";
 import db from "./db.js";
+
+
+const PORT = process.env.PORT || 3000
 
 const app = express();
 app.use(express.json());
@@ -14,4 +16,4 @@ app.use('/person',personRoutes)
 import menuRoutes from './routes/menu.routes.js'
 app.use('/menu',menuRoutes)
 
-app.listen(5000, () => console.log("Server is listening at port 5000"));
+app.listen(PORT, () => console.log("Server is listening at port 5000"));

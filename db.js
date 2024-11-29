@@ -1,6 +1,8 @@
 import mongoose from 'mongoose'
 
-const connectUrl = 'mongodb://localhost:27017/hotels';
+const connectUrl = process.env.MONGODB_URL_LOCAL;
+
+console.log(connectUrl);
 
 mongoose.connect(connectUrl)
 .then(()=>{
