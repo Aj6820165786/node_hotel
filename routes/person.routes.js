@@ -2,7 +2,7 @@ import express from 'express'
 import { Person } from '../models/person.models.js';
 const router = express.Router()
 
-// Person Endpoints
+
 router.get("/", async (req, res) => {
     try {
         const data = await Person.find();
