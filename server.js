@@ -31,7 +31,7 @@ import menuRoutes from './routes/menu.routes.js'
 
 
 // use routes
-app.use('/person',localAuthMiddleware,personRoutes)
+app.use('/person',personRoutes)
 app.use('/menu',menuRoutes)
 
 app.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`));
