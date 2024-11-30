@@ -2,8 +2,6 @@ import mongoose from 'mongoose'
 
 const connectUrl = process.env.MONGODB_URL_LOCAL;
 
-console.log(connectUrl);
-
 mongoose.connect(connectUrl)
 .then(()=>{
     console.log("Database connection established");
